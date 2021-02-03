@@ -1,0 +1,36 @@
+#include "ACS712.h"
+ACS712 sensor(ACS712_20A, A1);
+
+const int RELAY_ENABLE = 8;
+int Buzzer = 11 ;
+
+void setup() {
+ pinMode(RELAY_ENABLE,OUTPUT);
+ Serial.begin(9600);
+
+ Serial.println("Sensor is CALIBRATING...");
+ digitalWrite(RELAY_ENABLE,LOW);//Relay is OFF. Switch is ON.
+ sensor.calibrate();
+ Serial.println("CALIBRATED...");
+ delay(1000);
+}
+
+void loop() {
+   float I,P;
+   float V = 220;
+
+  digitalWrite(RELAY_ENABLE,LOW); // Relay is ON. Switch is OFF.  
+  I = sensor.getCurrentAC();
+  P = I * V;
+  if(I>=0.20){
+    tone(Buzzer,500);
+    delay(300);
+  }
+  else{
+    noTone(Buzzer);
+  }
+  Serial.println("-------------------------");
+  Serial.println(String("I = ") + I + " Amperes");
+  Serial.println(String("P = ") + P + " Watts");
+  delay(3000);
+}
