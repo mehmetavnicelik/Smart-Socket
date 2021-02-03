@@ -1,6 +1,7 @@
 # Smart-Socket
 
 ~ A project I worked on in 2019 ~
+
 Measures and controls the current which passes through a socket and also calculates the total consumed power. 
 
 The following components are used in this project.
