@@ -1,7 +1,7 @@
 # Smart-Socket
 Measures and controls the current which passes through a socket and also calculates the total consumed power. 
 
-In this project, The following component have been used.
+The following components are used in this project.
 
 -ACS712
 -Relay
