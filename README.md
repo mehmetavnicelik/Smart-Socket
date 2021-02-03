@@ -1,5 +1,5 @@
 # Smart-Socket
-Mesaures and controls the current which passes through a socket and also calculates the total consumed power. 
+Measures and controls the current which passes through a socket and also calculates the total consumed power. 
 
 In this project, The following component have been used.
 
