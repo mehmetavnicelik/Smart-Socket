@@ -1,6 +1,6 @@
 # Smart-Socket
 
-~ A project I worked on in 2019 ~
+~ An IoT project I worked on in 2019 ~
 
 Measures and controls the current which passes through a socket and also calculates the total consumed power. 
 
